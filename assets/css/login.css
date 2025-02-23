@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    color: #6C7293;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000000; /* Fondo oscuro */
+    color: #fff;
+  }
+
+  .fondo-p {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 90%;
+    max-width: 1000px;
+    background-color: #111219 ;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (min-width: 768px) {
+    .fondo-p {
+      flex-direction: row;
+      height: 700px;
+    }
+  }
+  .title {
+    display: flex;
+    /* top: -20px; */
+    /* padding-bottom: 15%; */
+    justify-content: center;
+  }
+
+  .form-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* .form-section2 {
+    flex-direction: column;
+    justify-content: center;
+  } */
+
+  .form-section h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .form-section p {
+    margin-bottom: 20px;
+    color: #666;
+  }
+
+  .form-section form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-section form input,
+  .form-section form button {
+    height: 50px;
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    padding: 0 15px;
+    font-size: 1rem;
+  }
+
+  .form-section form input {
+    color: #6C7293;
+    background-color: #000;
+  }
+
+  .form-section form button {
+    background-color: #ff0000;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .options {
+    /* padding-top: 1rem; */
+    padding-bottom: 1rem;
+  }
+
+  .form-section .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+
+  .form-section .options a {
+    color: #ff0000;
+    text-decoration: none;
+  }
+
+  .image-section {
+    flex: 1;
+    padding: 1.5rem;
+    /* margin: auto; */
+    /* overflow: hidden; */
+    /* border-radius: 5px; */
+    /* background: url('https://via.placeholder.com/400x500') no-repeat center center/cover; */
+    display: none;
+  }
+
+  #imagen-cambio {
+    transition: opacity 1s ease;
+  }
+
+  @media (min-width: 768px) {
+    .image-section {
+      display: block;
+    }
+  }
