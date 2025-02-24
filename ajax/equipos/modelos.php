@@ -1,4 +1,4 @@
-<?php
+w<?php
 
 require_once "../../modelos/equipos/modelos.php";
 require_once "../../controladores/equipos/modelos.php";

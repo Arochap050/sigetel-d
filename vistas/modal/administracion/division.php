@@ -1,5 +1,4 @@
 <!-- Modal registro division -->
-
 <div class="modal fade" id="registrodivision" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
   <div class="modal-dialog modal-dialog-centered">

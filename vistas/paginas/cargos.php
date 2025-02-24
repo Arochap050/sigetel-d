@@ -86,7 +86,7 @@
      </div>
 
 <?php include "../estructura/footer.php" ?>
-<script src="../../assets/tablajs/tabla_cargos.js"></script>
+<script src="../../assets/js/modulos/administracion/cargos.js"></script>
 
 </div>
 

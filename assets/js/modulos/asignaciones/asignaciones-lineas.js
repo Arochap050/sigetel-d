@@ -33,7 +33,6 @@ $(document).ready(function(){
                 "last": ">>",
                 "next": ">",
                 "previous": "<",
-
         }
     }
     });
@@ -140,7 +139,7 @@ $(document).ready(function(){
             data: datos,
             success: function(respuesta){
                 respuesta = respuesta.replace(/^"|"$/g,'');
-                console.log(respuesta);
+                //console.log(respuesta);
                 switch (respuesta) {
                     case "asignado":
                         alerta('Equipo asignado!', 'Se ha asignado el equipo.', 'success');
@@ -160,7 +159,6 @@ $(document).ready(function(){
             }
         });
     });
-
 
     $(document).on('click', '#info-asg-pres-linea', function(){
         let data = tabla_lineas_asg_pres.row($(this).parents('tr')).data();
@@ -229,7 +227,6 @@ $(document).ready(function(){
                     
                     respuesta = respuesta.replace(/^"|"$/g, '');
 
-                    console.log(respuesta)
                     switch (respuesta) {
                         
                         case "regresado":
@@ -240,15 +237,10 @@ $(document).ready(function(){
                             tabla_lineas_asg_pres.ajax.reload(null,false);
                             tabla_lineas_dev.ajax.reload(null,false);
 
-                            //tabla_equipo_dev.ajax.reload(null,false);
-
                             break;
                         case "vacio":
                             
                             alerta('Campo vacio!', 'Indique el estado en que se encuentra la linea.', 'info');
-                            // $('#retornolinea').modal('hide');
-                            // tabla_lineas_asg_pres.ajax.reload(null,false);
-                            //tabla_equipo_dev.ajax.reload(null,false);
 
                             break;
                         }
@@ -274,7 +266,7 @@ let asignar = function(tbody, table, row) {
     })
 }
 
-// --------------------------- asignacion de equipos ----------------------------------
+// --------------------------- filtros de empleados ----------------------------------
 
 $(document).ready(function(){
     $("#gerencia").on('change', function () {
@@ -299,40 +291,13 @@ $(document).ready(function(){
         });
     });
 });
-
-// ---------------------------- prestamo de equipos ---------------------------------
-//$(document).ready(function(){
-//     $("#gerenciap").on('change', function () {
-//         $("#gerenciap option:selected").each(function () {
-//             var id = $(this).val();
-//             $.post("../../BD/peticiones/getDivisiones.php", { id: id }, function(data) {
-//                 $("#Divisionp").html(data);
-//                 $("#Empleadoop").html('<option>Empleado</option>')
-//             });			
-//         });
-//     });
-// });
-
-// $(document).ready(function(){
-//     $("#Divisionp").on('change', function () {
-//         $("#Divisionp option:selected").each(function () {
-//             var id = $(this).val();
-//             $.post("../../BD/peticiones/getEmpleados.php", { id: id }, function(data) {
-
-//                 $("#Empleadoop").html(data);
-
-//             });			
-//         });
-//     });
-// });
-
+// ---------------------------------------------------------------------------------------
 
 $(document).on('click', '#btn-asignar-linea-modal', function(){
 
     let titulo = document.getElementById('titulo_modal_asg');
-    let accion = document.getElementById('accion-acc');
+    // let accion = document.getElementById('accion-acc');
     let boton = document.getElementById('boton-acc');
-
     $("#tipo").val("asignar");
     
     titulo.innerHTML = 'Asignar Linea';
@@ -343,10 +308,10 @@ $(document).on('click', '#btn-asignar-linea-modal', function(){
 $(document).on('click', '#btn-prestar-linea-modal', function(){
 
     let titulo = document.getElementById('titulo_modal_asg');
-    let accion = document.getElementById('accion-acc');
+    // let accion = document.getElementById('accion-acc');
     let boton = document.getElementById('boton-acc');
-
     $("#tipo").val("prestar");
+
     titulo.innerHTML = 'Prestar Linea';
     boton.innerHTML = '<button type="submit" class="btn btn-info letf" name="btn_asignar_equipo" value="asignar_equipo">Prestar</button>';
     // accion.innerHTML = '<input type="hidden" id="accion" value="prestar" name="tipo" readonly>';

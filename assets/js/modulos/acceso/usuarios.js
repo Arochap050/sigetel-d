@@ -77,3 +77,23 @@ $(document).on("submit", "#sesion-usuario", function(event){
         }
     })
 })
+
+const images = [ 
+    'assets/img/img_login/Vtv.jpg', 
+    'assets/img/img_login/prueba2.jpg', 
+    'assets/img/img_login/prueba3.jpg' 
+]; 
+ 
+let currentIndex = 0; 
+ 
+function changeImage() { 
+    const slideshow = document.getElementById('imagen-cambio'); 
+    currentIndex = (currentIndex + 1) % images.length; 
+    slideshow.style.opacity = 0;
+    setTimeout(() => { 
+        slideshow.src = images[currentIndex]; 
+        slideshow.style.opacity = 2;
+    }, 900);
+} 
+ 
+setInterval(changeImage, 5000); // Change image every 5 seconds 

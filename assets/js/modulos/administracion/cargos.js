@@ -13,6 +13,7 @@ $(document).ready(function() {
         "render": function(data, type, row, meta) {
 
             var registroId = row.ID_cargo; 
+            
 
             var eliminarUrl = "cargos.php?id=" + registroId;
 

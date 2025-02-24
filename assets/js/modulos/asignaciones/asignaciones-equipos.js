@@ -20,7 +20,6 @@ $(document).ready(function() {
         }],
 
         "columns": [
-
             { "data": "N_Marca",       "render": function(data) {return '<td><div class="mt-3">'+data+'</div></td>'} },
             { "data": "N_Equipo",      "render": function(data) {return '<td><div class="mt-3">'+data+'</div></td>'} },
             { "data": "N_Modelo",      "render": function(data) {return '<td><div class="mt-3">'+data+'</div></td>'} },
@@ -156,7 +155,7 @@ $(document).ready(function() {
             data: datos,
             success: function(respuesta){
                 respuesta = respuesta.replace(/^"|"$/g,'');
-                console.log(respuesta);
+                //console.log(respuesta);
                 switch (respuesta) {
                     case "asignado":
                         alerta('Equipo asignado!', 'Se ha asignado el equipo.', 'success');
@@ -260,8 +259,7 @@ $(document).ready(function() {
                     success: function(respuesta){
                     
                     respuesta = respuesta.replace(/^"|"$/g, '');
-
-                    console.log(respuesta)
+                    //console.log(respuesta)
                     switch (respuesta) {
                         
                         case "regresado":
@@ -269,6 +267,7 @@ $(document).ready(function() {
                             alerta('Equipo reincorporado!', 'El equipo se regreso al almacen.', 'success');
                             $('#retornoEquipo').modal('hide');
                             tabla_equipo_asg.ajax.reload(null,false);
+                            tabla.ajax.reload(null,false);
                             tabla_equipo_dev.ajax.reload(null,false);
 
                             break;

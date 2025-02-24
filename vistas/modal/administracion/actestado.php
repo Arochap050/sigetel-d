@@ -1,6 +1,8 @@
 <div class="modal fade" id="ActUsuaria" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
   <div class="modal-dialog modal-dialog-centered modal-sm">
-    <div class="modal-content bg-secondary">
+    
+  <div class="modal-content bg-secondary">
 
       <div class="">
 
@@ -46,6 +48,9 @@
         </form>
 
       </div>
+
     </div>
+
   </div>
+  
 </div>

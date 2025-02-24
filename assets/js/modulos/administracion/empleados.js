@@ -31,6 +31,7 @@ $(document).ready(function() {
         { "data": "acciones" },
     ],
 
+    
     "lengthMenu": [5,10,25,50],
     "destroy": true,
     "language": {

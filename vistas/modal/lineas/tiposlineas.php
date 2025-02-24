@@ -23,9 +23,9 @@
 
                         <?php
                         
-                        $query = $connect->query("SELECT * FROM Operadoras");
-
-                        while ($Operadora = mysqli_fetch_assoc($query)){
+                        $query = $conectado->prepare("SELECT * FROM Operadoras");
+                        $query->execute();
+                        while ($Operadora = $query->fetch()){
                             ?>
 
                             <option value="<?php echo $Operadora['ID_Operadora'] ?>"><?php echo $Operadora['N_Operadora'];?></option>

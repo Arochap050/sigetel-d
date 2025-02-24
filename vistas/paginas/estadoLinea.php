@@ -37,18 +37,13 @@
 
 </div>
 
-<?php
-//include "../../controladores/lineas/estadoLinea.php";
-//include "../modal/registrar/lineas/estadoLinea.php";
-?>
-
     <div class="row g-4">
 
         <div class="col-12 d-flex justify-content-center">
             <div class="bg-secondary rounded h-100 p-4" style="width: 60%;" >
                 <h5 class="mb-4 text-center">Estados</h5>
                 <div class="table-responsive">
-                    <table class="table text-center" id="tabla_general" width="100%" >
+                    <table class="table text-center table-striped table-hover" id="tabla_general" width="100%" >
                         
                         <thead class="bg-bl">
                             <tr>
